@@ -1,0 +1,360 @@
+/*
+* T05 Bare v1.0
+* By Khaled Abou Alfa
+* www.kaa.bz
+* For use on Micro.blog
+* Last Update: 17/08/2019
+*/
+
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––––
+- Colours
+- Base Styles
+- Typography
+- Links
+- Theme Switcher
+- Media Queries
+*/
+
+/* Colours
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --00: #ffffff;
+    --01: #fafafa;
+    --02: #d1d1d1;
+    --03: #3b3b3b;
+    --04: #0000FF;
+    --05: #E73154;
+}
+
+[data-theme="dark"] {
+    --00: #ffffff;
+    --01: #262E36;
+    --02: #686b6d;
+    --03: #A6AAAE;
+    --04: #2D7394;
+    --05: #E73154;
+}
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+    width: 100%;
+    font-family: 'merriweather-roman';
+    background-color: var(--03);
+    margin: 0.5em 0;
+}
+
+main {
+    background-color: var(--01)
+}
+
+header,
+nav,
+main,
+footer,
+.colophon {
+    width: 100%;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.photos-grid-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.photos-grid-item {
+    width: 90vw;
+    height: 90vw;
+}
+
+.photos-grid-container a {
+    border: none;
+}
+
+.photos-grid-container a:hover {
+    background-color: var(--01);
+}
+
+img.photos-grid-item {
+    border-radius: 0;
+}
+
+/* Logo */
+header {
+    margin: 0;
+    padding: 7rem 0;
+    width: 100%;
+    text-align: left;
+}
+
+
+h1.logo {
+    background: url(https://www.kaa.bz/uploads/2019/956145e6cb.png) no-repeat left;
+    background-size: 70px;
+    text-indent: -9999px;
+    margin: 0;
+}
+
+h1.logo a {
+    display: block;
+    width: 70px;
+    text-decoration: none;
+    margin: 0;
+}
+
+h1.logo a:hover {
+    background-color: none;
+}
+
+/* Navigation */
+nav ul {
+    margin: 15px 0;
+    padding-bottom: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    margin-right: 5px;
+}
+
+.colophon {
+    margin: 4rem 0;
+}
+
+.posts:not(:last-of-type) {
+    border-bottom: none;
+    margin-bottom: 8rem;
+}
+
+pre,
+dl,
+figure,
+table,
+p,
+form,
+.post {
+    margin-bottom: 8.5rem;
+}
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    font-weight: 400;
+    font-family: 'archivonarrow-medium';
+    text-transform: lowercase;
+}
+
+h1 {
+    font-size: 5rem;
+
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h2 a {
+    color: ;
+}
+
+h2 a:hover {
+    color: var(--03);
+    display: block;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h2,
+h3,
+h4 {
+    letter-spacing: 0.02rem;
+}
+
+p,
+.dt-published {
+    font-size: 1.6rem;
+    line-height: 1.7;
+}
+
+section.post__footer {
+    margin-bottom: 1rem;
+}
+
+em {
+    font-family: 'merriweather-italic';
+    font-style: normal;
+}
+
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+    color: var(--03);
+    text-decoration: none;
+    height: 100%;
+    border-bottom: 1px solid var(--03);
+    transition: none;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+p a:hover,
+li a:hover {
+    color: var(--01) padding: 0 0 1px 0;
+    background-color: var(--03);
+    border-bottom: 1px solid var(--03);
+}
+
+p a,
+li a {
+    padding: 0 0 1px 0;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+hr:before {
+    content: "* * *";
+}
+
+hr {
+    margin-bottom: 2.618rem;
+    text-align: center;
+    width: 100%;
+    border: none;
+    color: var(--02);
+}
+
+.dt-published {
+    margin: 5rem 0 1rem 0;
+    padding: 0;
+}
+
+.dt-published a {
+    color: var(--02);
+    border-bottom: 1px dotted var(--02);
+    font-weight: normal;
+}
+
+.dt-published a:hover {
+    color: var(--01);
+    background-color: var(--02);
+    border-bottom: 1px solid var(--02);
+}
+
+.fullbleed {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+sup {
+    vertical-align: super;
+    line-height: 0.5em;
+}
+
+
+/* Theme Switcher
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.theme-switch-wrapper {
+
+    text-align: left;
+    display: inline;
+    list-style-type: none;
+    font-size: 1.6rem;
+    margin: 0 1.5rem 0 0;
+    float: right;
+
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 18px;
+    position: relative;
+    width: 40px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--05);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 12px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 12px;
+}
+
+input:checked + .slider {
+    background-color: var(--05);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (min-width: 550px) {
+    .photos-grid-container {
+        display: grid;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        grid-template-columns: 33% 33% 33% !important;
+    }
+
+    .photos-grid-item {
+        height: 295px;
+        width: 295px
+    }
+}
+
+@media (min-width: 750px) {
+
+    ol,
+    ul {
+        list-style-position: outside;
+    }
+}

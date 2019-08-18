@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+
+<body>
+    <main class="main">
+        {{ partial "header.html" . }}
+        {{ partial "colophon.html" . }}
+        {{ partial "navigation.html" . }}
+        {{ block "main" . }}{{ end }}
+        {{ partial "footer.html" . }}
+    </main>
+</body>
+
+</html>

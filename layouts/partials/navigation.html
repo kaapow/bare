@@ -1,0 +1,59 @@
+<!-- Container is provides the structure that floats in the centre of the whole page. -->
+<div class="container">
+    <nav>
+        <ul>
+            <!-- 
+        <li>
+            If we need to use Feather icons, then this is the code snippet to use
+            <a title="xxx" href="/">
+                <i data-feather="xxx"></i>
+                <script>
+                    feather.replace({color:'var(--00)', height:'18px', width:'18px'})
+                </script>
+            </a></li>
+            
+        <li>
+        -->
+            <li><a href="/index">Index</a></li>
+            <li><a href="/previously">Previously</a></li>
+            <li><a href="/photos">Photos</a></li>
+            <li><a href="/about">About</a></li>
+            <li>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Toggle Script for Light/Dark Mode -->
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
+
+    </script>
+
+</div>

@@ -1,0 +1,90 @@
+/*
+* Libertad Caps Variants
+*/
+
+@font-face {
+    font-family: 'libertad-caps-extrabold';
+    src: url('/uploads/2019/afa2cbad9b.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'libertad-caps-regular';
+    src: url('/uploads/2019/fdc1ef5a6d.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+* Libertad Regular with old style numerals
+*/
+@font-face {
+    font-family: 'libertad-bold';
+    src: url('/uploads/2019/4658b4ba93.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'libertad-regular-italic';
+    src: url('/uploads/2019/e66a496c8a.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'libertad-regular';
+    src: url('/uploads/2019/49b149e5ae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+* Merriweather Typeface
+*/
+@font-face {
+    font-family: 'merriweather-bold';
+    src: url('/uploads/2019/7fea823e57.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'merriweather-italic';
+    src: url('/uploads/2019/d15727fc59.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'merriweather-roman';
+    src: url('/uploads/2019/efe373a493.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+* Archivo Narrow Typeface
+*/
+
+@font-face {
+    font-family: 'archivonarrow-bold';
+    src: url('/uploads/2019/75705a3091.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'archivonarrow-medium';
+    src: url('/uploads/2019/adde0d1e75.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'archivonarrow-regular';
+    src: url('/uploads/2019/07613f9414.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

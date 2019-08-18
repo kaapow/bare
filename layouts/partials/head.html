@@ -1,0 +1,62 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon" /-->
+    <link rel="icon" href="https://www.kaa.bz/uploads/2019/9514db4d74.png" sizes="32x32">
+
+    <!-- Custom CSS 
+    CSS files are linked in order of importance. Last being the most important.
+    -->
+    <link rel="stylesheet" href="/assets/stylesheets/global.css" />
+    <link rel="stylesheet" href="/assets/stylesheets/normalize.css" />
+    <link rel="stylesheet" href="/assets/stylesheets/skeleton.css" />
+    <link rel="stylesheet" href="/assets/stylesheets/fonts.css" />
+    <link rel="stylesheet" href="/assets/stylesheets/style.css" />
+
+    {{ if .RSSLink -}}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ "podcast.xml" | absURL }}" rel="alternate" type="application/rss+xml" title="Podcast" />
+    <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ "feed.json" | absURL }}" />
+    <link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}" />
+    {{ end -}}
+
+    <link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
+    {{ with .Site.Params.twitter_username }}
+    <link rel="me" href="https://twitter.com/{{ . }}" />
+    {{ end }}
+    {{ with .Site.Params.github_username }}
+    <link rel="me" href="https://github.com/{{ . }}" />
+    {{ end }}
+    {{ with .Site.Params.instagram_username }}
+    <link rel="me" href="https://instagram.com/{{ . }}" />
+    {{ end }}
+    <link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
+    <link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
+    <link rel="micropub" href="https://micro.blog/micropub" />
+    <link rel="microsub" href="https://micro.blog/microsub" />
+    <link rel="webmention" href="https://micro.blog/webmention" />
+    <link rel="subscribe" href="https://micro.blog/users/follow" />
+
+    <!-- Script to import Feather Icons (if needed somewhere in the design). -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Plausible script for analytics that are not super intrusive.-->
+    <script>
+        (function(w, d, s, o, f, js, fjs) {
+            w[o] = w[o] || function() {
+                (w[o].q = w[o].q || []).push(arguments)
+            };
+            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        }(window, document, 'script', 'plausible', 'https://plausible.io/js/p.js'));
+
+        plausible('page')
+
+    </script>
+
+</head>
